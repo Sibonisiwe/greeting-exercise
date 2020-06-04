@@ -1,0 +1,16 @@
+.box {
+    padding: 0.75em;
+    border-radius : 0.5em;
+    border : 1px solid #ddd;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .greetingBtn {
+      float: right;
+      margin-right: 8em;
+  }
+
+  .h4 {
+       margin-right: 3em; 
+  }
