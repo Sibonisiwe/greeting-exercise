@@ -7,44 +7,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="greet.css">
     <link rel="stylesheet" href="skeleton.css">
-
 </head>
 
 <body>
     <div class="container">
-        <div class="eight columns box">
+        <div class="six columns box">
 
-        <div class="row">
-            <div class="six columns">
-
-                <h2>Greeting</h2>
+            <div class="row">
+                <div class="six columns">
+                    <h2>Greeting</h2>
+                </div>
             </div>
-            </div>  
-            
+
             <br>
             <br>
 
             <div class="row">
                 <div class="four columns">
-                    <h4>Name</h4>
+                    <label for="">Name</label>
                 </div>
 
                 <div class="row">
-                <div class="eight columns">
-                    
-                    <textarea name="name" rows="3" cols="35" class="Greeting" class="Greeting"></textarea>
-                    <button class="button-primary greetingBtn" on type="button" name="button">greet me</button>
-                    
+                    <div class="eight columns">
 
+                        <!-- <textarea name="name" rows="3" cols="35" class="Greeting" class="Greeting"></textarea> -->
+                        <input type="text" name="" value="" placeholder="enter 'name'" class="enterName">
+
+                        <button class="button-primary greetingBtn" on type="button" name="button">greet me</button>
+                        <span class="message">Hello </span>
+                        <!-- <span class="msg ">hello<span class="message">person</span> </span> -->
+
+                    </div>
 
                 </div>
-                
             </div>
-        </div>
-
-
-
-
         </div>
 </body>
 <script src="greet.js"></script>
