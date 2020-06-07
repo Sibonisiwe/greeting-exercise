@@ -1,12 +1,14 @@
 const greetingBtn = document.querySelector(".greetingBtn");
 const enterName = document.querySelector(".enterName");
-const hello = document.querySelector(".message");
+const hellow = document.querySelector(".message");
+
+greetingInstance = Greeting()
 
 function greetingBtnClicked() {
-    var name = enterName.value;
-    var msg = name;
+    greetingInstance.hello(enterName.value)
+    //var msg = name;
 
-    hello.innerHTML = msg;
+    hellow.innerHTML = (greetingInstance.hello());
 }
 
 
