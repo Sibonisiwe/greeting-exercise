@@ -1,30 +1,67 @@
 function Greeting() {
-    //var names = "";
-    
+    var names = "";
+
+    let greetTwo = "";
+    let greetOne = "";
+    let greetThree = "";
+
+    var greetingCounter = 0;
     
     function hello(name) {
-        return "Hello, " + name;    
+        return "Hi, " + name;    
     }
-    //greet("sibo");
 
-    // function getNelly(){
-    // return names;
-    // }
+    function greet() {
+         names;
+    }
 
-    // function enterName(enter) {
-    //  names = enter;
-    // }
+    function EnglishOne(userName) {
+        return "Hellow, " + userName;
+    }
 
-    // function getEnteredName(){
-    //     return name;
-    // }
+    function getEnglish() {
+        return greetTwo;
+    }
 
+    function IsiXhosaOne(userName) {
+        return "Molo, " + userName;
+    }
+
+    function getIsiXhosa() {
+        return greetOne;
+    }
+
+    function AfrikaansOne(userName) {
+        return "Hallo, " + userName;
+    }
+
+    function getAfrikaans() {
+        return greetThree;
+    }
+
+    function countGreetings() {
+        greetingCounter++;
+    }
+
+    function counter(count) {
+        greetingCounter = count;
+    }
+
+    function getCounter() {
+        return greetingCounter;
+    }
+    
     return {
-        hello
-        //hello,
-        // getNelly,
-        // enterName,
-        // getEnteredName
-        
+        hello,
+        greet,
+        EnglishOne,
+        getEnglish,
+        IsiXhosaOne,
+        getIsiXhosa,
+        AfrikaansOne,
+        getAfrikaans,
+        counter,
+        getCounter,
+        countGreetings
     };
 }
