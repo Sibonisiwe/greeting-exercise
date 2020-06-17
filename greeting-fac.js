@@ -1,67 +1,70 @@
-function Greeting() {
-    var names = "";
+function Greeting(greeted) {
 
-    let greetTwo = "";
-    let greetOne = "";
-    let greetThree = "";
+  var greetedNames = greeted || {}
 
-    var greetingCounter = 0;
-    
-    function hello(name) {
-        return "Hi, " + name;    
+  var greetingsCounter = 0;
+
+
+  function hello(name) {
+    return "Hi, " + name;
+  }
+
+  function greet(name) {
+    if (name) {
+      if (greetedNames[name] === undefined) {
+        greetingsCounter++;
+        greetedNames[name] = 0;
+      }
     }
+  }
 
-    function greet() {
-         names;
-    }
+  function languageChecked(userName) {
+    var checkedRadio = document.querySelector("input[name='language']:checked");
+    //alert(checkedRadioBtn.value);
+    if (checkedRadio) {
+      var buttonChecked = checkedRadio.value;
 
-    function EnglishOne(userName) {
-        return "Hellow, " + userName;
-    }
+      if (buttonChecked === "Xhosa") {
+        return "Molo, " + userName
 
-    function getEnglish() {
-        return greetTwo;
-    }
+      }
 
-    function IsiXhosaOne(userName) {
-        return "Molo, " + userName;
-    }
+      else if (buttonChecked === "English") {
+        return "Hellow, " + userName
 
-    function getIsiXhosa() {
-        return greetOne;
-    }
+      }
 
-    function AfrikaansOne(userName) {
-        return "Hallo, " + userName;
+      else if (buttonChecked === "Afrikaans") {
+        return "Hallo, " + userName
+      }
+      else { "please select the lang" }
     }
+  }
 
-    function getAfrikaans() {
-        return greetThree;
-    }
+  
 
-    function countGreetings() {
-        greetingCounter++;
-    }
+  function getCounter() {
+    return greetingsCounter;
+  }
+  function getGreetedNames() {
+    return greetedNames
+  }
 
-    function counter(count) {
-        greetingCounter = count;
-    }
 
-    function getCounter() {
-        return greetingCounter;
-    }
-    
-    return {
-        hello,
-        greet,
-        EnglishOne,
-        getEnglish,
-        IsiXhosaOne,
-        getIsiXhosa,
-        AfrikaansOne,
-        getAfrikaans,
-        counter,
-        getCounter,
-        countGreetings
-    };
+
+  return {
+    hello,
+    greet,
+    getCounter,
+    getGreetedNames,
+    languageChecked,
+    //EnglishOne,
+    //IsiXhosaOne,
+    //AfrikaansOne,
+    //theCounter,
+
+
+    //languageChecked,
+
+  };
 }
