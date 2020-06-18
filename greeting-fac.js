@@ -58,13 +58,6 @@ function Greeting(greeted) {
     getCounter,
     getGreetedNames,
     languageChecked,
-    //EnglishOne,
-    //IsiXhosaOne,
-    //AfrikaansOne,
-    //theCounter,
-
-
-    //languageChecked,
-
+    
   };
 }

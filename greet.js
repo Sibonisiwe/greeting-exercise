@@ -3,7 +3,7 @@ const enterName = document.querySelector(".enterName");
 const theMessage = document.querySelector(".message");
 
 const theButtons = document.querySelector(".radioBtn");
-//const theCounter = document.querySelector(".counterBtn");
+
 const count = document.querySelector(".counter");
 
 
@@ -26,12 +26,12 @@ function greetingBtnClicked() {
     theMessage.innerHTML = greetingInstance.hello(msg)
     theMessage.innerHTML = greetingInstance.languageChecked(msg)
 
-        //console.log(greetingInstance.getGreetedNames())
-        //localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
+        console.log(greetingInstance.getGreetedNames())
+        localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
 
-        const greetState = greetingInstance.getGreetedNames();
-        const greetStateString = JSON.stringify(greetState);
-        localStorage["greetState"] = greetStateString;
+        // const greetState = greetingInstance.getGreetedNames();
+        // const greetStateString = JSON.stringify(greetState);
+        // localStorage["greetState"] = greetStateString;
 
         if (localStorage.length > 0) {
              greetingInstance.greet()
@@ -59,19 +59,4 @@ function counter() {
 greetingBtn.addEventListener("click", greetingBtnClicked);
 
 
-// var checkedRadioBtn = document.querySelector("input[name='language']:checked");
-    // //alert(checkedRadioBtn.value);
-    // if (checkedRadioBtn) {
-    //     var buttonChecked = checkedRadioBtn.value;
 
-    //     if (buttonChecked === "Xhosa") {
-    //         theMessage.innerHTML = greetingInstance.IsiXhosaOne(msg);
-    //     }
-
-    //     else if (buttonChecked === "English") {
-    //         theMessage.innerHTML = greetingInstance.EnglishOne(msg);
-    //     }
-
-    //     else if (buttonChecked === "Afrikaans") {
-    //         theMessage.innerHTML = greetingInstance.AfrikaansOne(msg);
-    //     }
