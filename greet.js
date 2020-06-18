@@ -3,7 +3,7 @@ const enterName = document.querySelector(".enterName");
 const theMessage = document.querySelector(".message");
 
 const theButtons = document.querySelector(".radioBtn");
-
+const counterBtn = document.querySelector(".counterBtn");
 const count = document.querySelector(".counter");
 
 
@@ -24,7 +24,13 @@ function greetingBtnClicked() {
 
     theMessage.innerHTML = "fghjfghjkcvbnm"
     theMessage.innerHTML = greetingInstance.hello(msg)
-    theMessage.innerHTML = greetingInstance.languageChecked(msg)
+
+    var checkedRadio = document.querySelector("input[name='language']:checked");
+    //alert(checkedRadioBtn.value);
+    if (checkedRadio) {
+      var buttonChecked = checkedRadio.value;
+    theMessage.innerHTML = greetingInstance.languageChecked(buttonChecked, msg)
+    }
 
         console.log(greetingInstance.getGreetedNames())
         localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
@@ -44,19 +50,29 @@ function greetingBtnClicked() {
             greetingInstance.getCounter();
           }
           console.log(window.localStorage);
-
-        counter()
+          counter
     }
     
+    // window.addEventListener('load', function(){
+    //   count.innerHTML = greetingInstance.getCounter();
+    // });
 
-function counter() {
+    function counter() {
+      count.innerHTML = greetingInstance.getCounter();
+    }
 
-    count.innerHTML = greetingInstance.getCounter();
+    
+    greetingBtn.addEventListener("click", greetingBtnClicked);
+window.addEventListener('load', counter);
+// function counter() {
 
-}
+//     count.innerHTML = greetingInstance.getCounter();
+
+// }
 
 
-greetingBtn.addEventListener("click", greetingBtnClicked);
+
+
 
 
 

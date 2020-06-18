@@ -18,30 +18,30 @@ function Greeting(greeted) {
     }
   }
 
-  function languageChecked(userName) {
-    var checkedRadio = document.querySelector("input[name='language']:checked");
-    //alert(checkedRadioBtn.value);
-    if (checkedRadio) {
-      var buttonChecked = checkedRadio.value;
-
-      if (buttonChecked === "Xhosa") {
+  function languageChecked(lang, userName) {
+    if (lang === undefined) {
+      return "Please select language"
+    }
+    else {
+      if (lang === "Xhosa") {
         return "Molo, " + userName
 
       }
 
-      else if (buttonChecked === "English") {
+      if (lang === "English") {
         return "Hellow, " + userName
 
       }
 
-      else if (buttonChecked === "Afrikaans") {
+      if (lang === "Afrikaans") {
         return "Hallo, " + userName
       }
-      else { "please select the lang" }
     }
+
   }
 
-  
+
+
 
   function getCounter() {
     return greetingsCounter;
@@ -58,6 +58,6 @@ function Greeting(greeted) {
     getCounter,
     getGreetedNames,
     languageChecked,
-    
+
   };
 }

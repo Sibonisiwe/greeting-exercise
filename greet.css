@@ -27,4 +27,9 @@ background-color: aquamarine;
       float: right;
   }
 
+  .counter {
+      font-weight: bold;
+      font-size: 3em;
+  }
+
   
