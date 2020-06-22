@@ -1,35 +1,29 @@
-/* .container {
-background-color: aquamarine;
-} */
 
-  .greetingBtn {
-      float: right;
-      margin-right: 9em;
-  }
+@media(min-width: 800px) {
 
-  .h4 {
-       margin-right: 3em; 
-  }
+.box {
+    padding-left: 1em;
+    margin-left: 1em;
+    border: 1px solid brown;
+    background-color: blanchedalmond;
+    padding-bottom: 3em;
+}
 
-  .radio {
-      display: flex;
-  }
-
-  .radioOne {
-      float: left;
-  }
-
-  .radioTwo {
-      float: left;
-  }
-
-  .radioThree {
-      float: right;
-  }
-
+    
   .counter {
       font-weight: bold;
-      font-size: 3em;
+      font-size: 5em;
+      color: brown;
+      padding-left: 3em;
+      
   }
+
+  .btns {
+      color: brown;
+  }
+
+  
+}
+
 
   

@@ -3,8 +3,8 @@ const enterName = document.querySelector(".enterName");
 const theMessage = document.querySelector(".message");
 
 const theButtons = document.querySelector(".radioBtn");
-const counterBtn = document.querySelector(".counterBtn");
-const count = document.querySelector(".counter");
+const countElem = document.querySelector(".counter");
+const resetElem = document.querySelector(".resetBtn");
 
 
 
@@ -15,60 +15,64 @@ if (localStorage['name']) {
 
 var greetingInstance = Greeting(namesGreeted)
 
+window.addEventListener('load', function () {
+  countElem.innerHTML = greetingInstance.getCounter();
+});
+
 function greetingBtnClicked() {
-    const user = enterName.value;
-    const msg = user;
-    if (user) {
-        greetingInstance.greet(user)
-    }
+  const user = enterName.value;
+  const msg = user;
+  if (user) {
+    greetingInstance.greet(user)
+  }
 
-    theMessage.innerHTML = "fghjfghjkcvbnm"
-    theMessage.innerHTML = greetingInstance.hello(msg)
+  //theMessage.innerHTML = greetingInstance.hello(msg)
 
-    var checkedRadio = document.querySelector("input[name='language']:checked");
-    //alert(checkedRadioBtn.value);
-    if (checkedRadio) {
-      var buttonChecked = checkedRadio.value;
+  
+
+  var checkedRadio = document.querySelector("input[name='language']:checked");
+  //alert(checkedRadioBtn.value);
+  if (checkedRadio) {
+    var buttonChecked = checkedRadio.value;
     theMessage.innerHTML = greetingInstance.languageChecked(buttonChecked, msg)
-    }
+  }
+  else {
+    theMessage.innerHTML = "Please choose a language"
 
-        console.log(greetingInstance.getGreetedNames())
-        localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
+  }
 
-        // const greetState = greetingInstance.getGreetedNames();
-        // const greetStateString = JSON.stringify(greetState);
-        // localStorage["greetState"] = greetStateString;
 
-        if (localStorage.length > 0) {
-             greetingInstance.greet()
-        } else {
-             "No items"
-          }
-        console.log(localStorage.length);
+  //console.log(greetingInstance.getGreetedNames())
+  localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
 
-        if (window.localStorage) {
-            greetingInstance.getCounter();
-          }
-          console.log(window.localStorage);
-          counter
-    }
-    
-    // window.addEventListener('load', function(){
-    //   count.innerHTML = greetingInstance.getCounter();
-    // });
 
-    function counter() {
-      count.innerHTML = greetingInstance.getCounter();
-    }
+  if (localStorage.length > 0) {
+    greetingInstance.greet()
+  } else {
+    "No items"
+  }
 
-    
-    greetingBtn.addEventListener("click", greetingBtnClicked);
-window.addEventListener('load', counter);
-// function counter() {
 
-//     count.innerHTML = greetingInstance.getCounter();
+  if (window.localStorage) {
+    countElem.innerHTML = greetingInstance.getCounter();
+  }
 
-// }
+  
+
+  console.log(greetingInstance.validateStr());
+  enterName.innerHTML = greetingInstance.validateStr();
+ 
+}
+
+
+function reset() {
+  localStorage.clear()
+
+}
+
+resetElem.addEventListener("click", reset);
+greetingBtn.addEventListener("click", greetingBtnClicked);
+
 
 
 

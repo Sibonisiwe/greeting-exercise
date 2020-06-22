@@ -2,27 +2,25 @@ function Greeting(greeted) {
 
   var greetedNames = greeted || {}
 
-  var greetingsCounter = 0;
 
-
-  function hello(name) {
-    return "Hi, " + name;
-  }
-
+  
   function greet(name) {
     if (name) {
       if (greetedNames[name] === undefined) {
-        greetingsCounter++;
         greetedNames[name] = 0;
       }
     }
   }
 
+  function errorhandler() {
+
+  }
+
   function languageChecked(lang, userName) {
-    if (lang === undefined) {
-      return "Please select language"
-    }
-    else {
+    //if (lang === undefined) {
+    //   return "Please select language"
+    // }
+    // else {
       if (lang === "Xhosa") {
         return "Molo, " + userName
 
@@ -40,24 +38,30 @@ function Greeting(greeted) {
 
   }
 
-
-
-
   function getCounter() {
-    return greetingsCounter;
+    var countedNames = Object.keys(greetedNames);
+    return countedNames.length;
   }
   function getGreetedNames() {
     return greetedNames
   }
 
+function validateStr(greetedNames, strMatchPattern) {
+var strMatchPattern = /[^a-zA-Z]/g; 
+  var objRegExp = new RegExp(strMatchPattern);
+ 
+  return objRegExp.test(greetedNames);
+
+}
 
 
   return {
-    hello,
+    //hello,
     greet,
     getCounter,
     getGreetedNames,
     languageChecked,
+    validateStr,
 
   };
 }
