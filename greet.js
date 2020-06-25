@@ -19,54 +19,53 @@ window.addEventListener('load', function () {
   countElem.innerHTML = greetingInstance.getCounter();
 });
 
+
 function greetingBtnClicked() {
   const user = enterName.value;
-  const msg = user;
-  if (user) {
-    greetingInstance.greet(user)
-  }
 
-  //theMessage.innerHTML = greetingInstance.hello(msg)
+    const msg = user;
+    var nameG = msg.charAt(0).toUpperCase() + msg.slice(1).toLowerCase();
+    if (nameG) {
+      greetingInstance.greet(nameG)
+      
+theMessage.innerHTML = greetingInstance.errorhandler(name);
+    }
 
-  
+    
+    var checkedRadio = document.querySelector("input[name='language']:checked");
+    if (checkedRadio) {
+      var buttonChecked = checkedRadio.value;
 
-  var checkedRadio = document.querySelector("input[name='language']:checked");
-  //alert(checkedRadioBtn.value);
-  if (checkedRadio) {
-    var buttonChecked = checkedRadio.value;
-    theMessage.innerHTML = greetingInstance.languageChecked(buttonChecked, msg)
-  }
-  else {
-    theMessage.innerHTML = "Please choose a language"
+      theMessage.innerHTML = greetingInstance.languageChecked(buttonChecked, nameG)
+    
+    
+      localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
 
-  }
+      if (localStorage.length > 0) {
+        greetingInstance.greet()
+      } else {
+        "No items"
+      }
 
+      if (window.localStorage) {
+        countElem.innerHTML = greetingInstance.getCounter();
 
-  //console.log(greetingInstance.getGreetedNames())
-  localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
+      }
+    } 
+theMessage.innerHTML = greetingInstance.errorhandler(buttonChecked);
 
-
-  if (localStorage.length > 0) {
-    greetingInstance.greet()
-  } else {
-    "No items"
-  }
-
-
-  if (window.localStorage) {
-    countElem.innerHTML = greetingInstance.getCounter();
-  }
-
-  
-
-  console.log(greetingInstance.validateStr());
-  enterName.innerHTML = greetingInstance.validateStr();
- 
 }
+
+
+
+
+
+
 
 
 function reset() {
   localStorage.clear()
+  location.reload()
 
 }
 
