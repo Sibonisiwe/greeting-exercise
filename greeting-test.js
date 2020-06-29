@@ -34,16 +34,16 @@ describe("Greeting exercise", function () {
         it("should be able to greet sinazo in Xhosa", function(){
             let greetings = Greeting();
 
-            greetings.languageChecked("Xhosa");
+            greetings.languageChecked("Xhosa", "sinazo");
             const language = greetings.languageChecked("Xhosa", "sinazo");
             
-            assert.equal("Molo, sinazo", language );
+            assert.equal("Molo, sinazo", language);
         });
 
         it("should be able to greet sinazo in English", function(){
             let greetings = Greeting();
             
-            greetings.languageChecked("English");
+            greetings.languageChecked("English", "sinazo");
             const language = greetings.languageChecked("English", "sinazo");
             
             assert.equal("Hellow, sinazo", language)
@@ -52,10 +52,20 @@ describe("Greeting exercise", function () {
         it("should be able to greet sinazo in Afrikaans", function(){
             let greetings = Greeting();
             
-            greetings.languageChecked("Afrikaans");
+            greetings.languageChecked("Afrikaans", "sinazo");
             const language = greetings.languageChecked("Afrikaans", "sinazo");
             
             assert.equal("Hallo, sinazo", language)
         }); 
+    });
+
+    describe("The counter function", function() {
+        it("should be able to count names stored", function() {
+            let greetings = Greeting();
+            greetings.getCounter();
+        
+
+            assert.equal(0, greetings.getCounter());
+        });
     });
 });

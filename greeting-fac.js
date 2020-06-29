@@ -42,6 +42,7 @@ function Greeting(greeted) {
     if (lang === "Afrikaans") {
       return "Hallo, " + userName
     }
+
   }
 
 

@@ -28,8 +28,11 @@ function greetingBtnClicked() {
     if (nameG) {
       greetingInstance.greet(nameG)
       
-theMessage.innerHTML = greetingInstance.errorhandler(name);
-    }
+    } 
+    
+      theMessage.innerHTML = greetingInstance.errorhandler();
+
+    
 
     
     var checkedRadio = document.querySelector("input[name='language']:checked");
@@ -51,16 +54,11 @@ theMessage.innerHTML = greetingInstance.errorhandler(name);
         countElem.innerHTML = greetingInstance.getCounter();
 
       }
+
     } 
-theMessage.innerHTML = greetingInstance.errorhandler(buttonChecked);
+    theMessage.innerHTML = greetingInstance.errorhandler();
 
 }
-
-
-
-
-
-
 
 
 function reset() {
