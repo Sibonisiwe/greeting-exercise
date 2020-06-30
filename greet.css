@@ -6,6 +6,14 @@
     padding-bottom: 3em;
 }
 
+.counter {
+    font-weight: bold;
+    font-size: 5em;
+    color: brown;
+    padding-left: 3em;
+    
+}
+
 @media(min-width: 800px) {
 
 .box {
@@ -24,12 +32,7 @@
       padding-left: 3em;
       
   }
-
-  .btns {
-      
-  }
-
-  
+ 
 }
 
 

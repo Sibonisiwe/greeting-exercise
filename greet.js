@@ -29,19 +29,18 @@ function greetingBtnClicked() {
       greetingInstance.greet(nameG)
       
     } 
+    //var checkedRadio = document.querySelector("input[name='language']:checked");
+    var checkedRadio = document.querySelector(".radioBtn:checked");
+    if (checkedRadio === null && nameG === "") {
+      theMessage.innerHTML = "please enter your name and select a language";
+    } else if (nameG === "") {
+       theMessage.innerHTML = "please enter a name";
+    } else if (checkedRadio === null) {
+     theMessage.innerHTML = "please select a language";
+    } else if (!(checkedRadio === null && nameG === "")) { 
+    theMessage.innerHTML = greetingInstance.languageChecked(checkedRadio.value, nameG)
     
-      theMessage.innerHTML = greetingInstance.errorhandler();
 
-    
-
-    
-    var checkedRadio = document.querySelector("input[name='language']:checked");
-    if (checkedRadio) {
-      var buttonChecked = checkedRadio.value;
-
-      theMessage.innerHTML = greetingInstance.languageChecked(buttonChecked, nameG)
-    
-    
       localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
 
       if (localStorage.length > 0) {
@@ -56,8 +55,9 @@ function greetingBtnClicked() {
       }
 
     } 
-    theMessage.innerHTML = greetingInstance.errorhandler();
-
+    setTimeout(function(){theMessage.innerHTML = ""},3000)
+    
+  
 }
 
 

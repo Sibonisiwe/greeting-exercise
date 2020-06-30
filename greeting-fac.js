@@ -12,21 +12,21 @@ function Greeting(greeted) {
     }
   }
 
-  function errorhandler(lang, name){
+  // function errorhandler(lang, userName){
 
-    if(name === ""){
-      return "Please enter a name"
-    }
+  //   if(userName === ""){
+  //     return "Please enter a name"
+  //   }
 
-    else if(lang === undefined){
-      return "Please select a language"
-       }
+  //   else if(lang === undefined){
+  //     return "Please select a language"
+  //      }
 
-    else if(name === "" && lang === undefined){
-      return "Please enter a name and select the a language"
-     }
+  //   else if(userName === "" && lang === undefined){
+  //     return "Please enter a name and select the a language"
+  //    }
 
-  }
+  // }
 
   function languageChecked(lang, userName) {
     if (lang === "Xhosa") {
@@ -61,6 +61,6 @@ function Greeting(greeted) {
     getCounter,
     getGreetedNames,
     languageChecked,
-    errorhandler,
+    //errorhandler,
   };
 }
