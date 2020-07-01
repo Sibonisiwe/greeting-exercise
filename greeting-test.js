@@ -28,7 +28,14 @@ describe("Greeting exercise", function () {
             assert.equal(2, greetings.getCounter());
         
         });
+
+        it("should be able to change a name that starts with upper to first letter uppercase and the rest to lowercase", function () {
+            let greetings = Greeting();
+        greetings.greet("SIBO");
+
+        assert.deepEqual({"Sibo":0}, greetings.getGreetedNames());
     });
+});
 
     describe("Radio button values", function () {
         it("should be able to greet sinazo in Xhosa", function(){

@@ -5,9 +5,10 @@ function Greeting(greeted) {
 
 
   function greet(name) {
-    if (name) {
-      if (greetedNames[name] === undefined) {
-        greetedNames[name] = 0;
+   var nameR =  name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    if (nameR) {
+      if (greetedNames[nameR] === undefined) {
+        greetedNames[nameR] = 0;
       }
     }
   }
