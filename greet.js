@@ -40,7 +40,6 @@ function greetingBtnClicked() {
     } else if (!(checkedRadio === null && nameG === "")) { 
     theMessage.innerHTML = greetingInstance.languageChecked(checkedRadio.value, nameG)
     
-
       localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
 
       if (localStorage.length > 0) {
