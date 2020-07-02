@@ -1,37 +1,50 @@
-.box {
+.container {
     padding-left: 1em;
     margin-left: 1em;
-    border: 1px solid brown;
-    background-color: blanchedalmond;
+    /* border: 1px solid brown; */
+    background-color: antiquewhite;
     padding-bottom: 3em;
 }
 
 .counter {
     font-weight: bold;
-    font-size: 5em;
-    color: brown;
-    padding-left: 3em;
+    font-size: 1em;
+    color: blue;
     
+    
+}
+
+.h1 {
+    font-size: large;
 }
 
 @media(min-width: 800px) {
 
-.box {
+.container {
     padding-left: 1em;
     margin-left: 1em;
-    border: 1px solid brown;
-    background-color: blanchedalmond;
+    /* border: 1px solid blue; */
+    background-color: antiquewhite;
     padding-bottom: 3em;
+    text-align-last: center;
+    margin-top: 6em;
+    
 }
 
     
   .counter {
       font-weight: bold;
-      font-size: 5em;
-      color: brown;
-      padding-left: 3em;
-      
+      font-size: 1em;
+      color: blue;
+      margin-right: 20em; 
+    
+      float: right;
+       
   }
+/* 
+  .enterName {
+      margin-left: 10em;
+  } */
  
 }
 

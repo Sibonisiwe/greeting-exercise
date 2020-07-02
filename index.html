@@ -6,52 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="greet.css">
-    <link rel="stylesheet" href="skeleton.css">
+    <!-- <link rel="stylesheet" href="skeleton.css"> -->
+    <link rel="stylesheet" href="simple-grid.css">
 </head>
 
 <body>
-    <div class="five columns box">
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
+        <!-- <div class="five columns box"> -->
+
+        <div class="row">
+            <div class="six columns">
+                <h1>Greeting</h1>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="eight columns">
+                <label for="">Name</label>
+                <input type="text" name="" value="" placeholder="enter 'name'" class="enterName">
+
+                <!-- <div class="four columns"> -->
+                <div class="counter">0</div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="nine columns">
+                <input type="radio" name="language" class="radioBtn" value="Xhosa">IsiXhosa
+                <input type="radio" name="language" class="radioBtn" value="English">English
+                <input type="radio" name="language" class="radioBtn" value="Afrikaans">Afrikaans
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="btns">
+
                 <div class="six columns">
-                    <h2>Greeting</h2>
+                    <button class="button-primary greetingBtn" on type="button" name="button">greet me</button>
                 </div>
+
             </div>
+        </div>
 
-            <br>
-
-            <div class="row">
-                <div class="two columns">
-                    <label for="">Name</label>
-                </div>
-
-                <div class="six columns">
-                    <input type="text" name="" value="" placeholder="enter 'name'" class="enterName">
-                </div>
-
-                <span class="counter">0</span>
-            </div>
-
-            <div class="row">
-                <div class="nine columns">
-                    <input type="radio" name="language" class="radioBtn" value="Xhosa">IsiXhosa
-                    <input type="radio" name="language" class="radioBtn" value="English">English
-                    <input type="radio" name="language" class="radioBtn" value="Afrikaans">Afrikaans
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="btns">
-
-                    <div class="six columns">
-                        <button class="button-primary greetingBtn" on type="button" name="button">greet me</button>
-                    </div>    
-
-                    
-                </div>
-            </div>
-        
 
         <div class="row">
             <div class="twelve columns">
@@ -60,13 +62,12 @@
         </div>
 
         <br>
-        <br>
 
         <div class="six columns">
             <button class="button-primary resetBtn" on type="button" name="button">reset</button>
         </div>
 
-    </div>
+        <!-- </div> -->
 
     </div>
 </body>

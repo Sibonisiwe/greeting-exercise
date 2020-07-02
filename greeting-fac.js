@@ -5,7 +5,7 @@ function Greeting(greeted) {
 
 
   function greet(name) {
-   var nameR =  name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    var nameR = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     if (nameR) {
       if (greetedNames[nameR] === undefined) {
         greetedNames[nameR] = 0;
@@ -13,23 +13,27 @@ function Greeting(greeted) {
     }
   }
 
-  // function errorhandler(lang, userName){
+  function errorhandler(lang, userName) {
 
-  //   if(userName === ""){
-  //     return "Please enter a name"
-  //   }
+    if (!userName && !lang) {
+      return "Please enter a name and select the a language"
+    }
+    else if (!userName) {
+      return "Please enter a name"
+    }
 
-  //   else if(lang === undefined){
-  //     return "Please select a language"
-  //      }
+    else if (!lang) {
+      return "Please select a language"
+    }
 
-  //   else if(userName === "" && lang === undefined){
-  //     return "Please enter a name and select the a language"
-  //    }
+    return "";
 
-  // }
+  }
 
   function languageChecked(lang, userName) {
+
+    greet(userName);
+
     if (lang === "Xhosa") {
       return "Molo, " + userName
 
@@ -57,11 +61,13 @@ function Greeting(greeted) {
     return greetedNames;
   }
 
+  
+
   return {
     greet,
     getCounter,
     getGreetedNames,
     languageChecked,
-    //errorhandler,
+    errorhandler,
   };
 }
