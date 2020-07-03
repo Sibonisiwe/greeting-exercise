@@ -1,17 +1,26 @@
 .container {
     padding-left: 1em;
     margin-left: 1em;
-    /* border: 1px solid brown; */
+    border: 1px solid blue; 
     background-color: antiquewhite;
     padding-bottom: 3em;
+    text-align-last: center; 
+    margin-top: 6em
 }
 
 .counter {
     font-weight: bold;
     font-size: 1em;
     color: blue;
+    float: right;
+    margin-right: 3em; 
+    padding-right: 3em;
     
     
+}
+
+.name {
+    padding-left: 22em;
 }
 
 .h1 {
@@ -23,10 +32,10 @@
 .container {
     padding-left: 1em;
     margin-left: 1em;
-    /* border: 1px solid blue; */
+    border: 1px solid blue; 
     background-color: antiquewhite;
     padding-bottom: 3em;
-    text-align-last: center;
+    /* text-align-last: center; */
     margin-top: 6em;
     
 }

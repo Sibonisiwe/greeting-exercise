@@ -37,6 +37,28 @@ describe("Greeting exercise", function () {
     });
 });
 
+    describe("The error handling function", function() {
+        it("should be able to retunr an error message 'please enter your name and select a language' when both blank", function() {
+            let greetings = Greeting();
+            greetings.errorhandler("","");
+            assert.equal("Please enter a name and select a language", greetings.errorhandler())
+        });
+
+        it("should be able to return an error message 'Please enter a name' when name is blank", function() {
+            let greetings = Greeting();
+            greetings.errorhandler("English", "");
+            const errors = greetings.errorhandler("English", "");
+            assert.equal("Please enter a name", errors);
+        });
+
+        it("should be able to return an error message 'please select a language' when no button is selected", function() {
+            let greetings = Greeting();
+            greetings.errorhandler("", "Sandy")
+            const error = greetings.errorhandler("", "Sandy")
+            assert.equal('Please select a language', error);
+        });
+    });
+
     describe("Radio button values", function () {
         it("should be able to greet sinazo in Xhosa", function(){
             let greetings = Greeting();

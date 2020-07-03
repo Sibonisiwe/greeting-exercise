@@ -1,22 +1,23 @@
 function Greeting(greeted) {
 
   var greetedNames = greeted || {}
-
+  //var RegExp = /[^A-Za-z]/g;
 
 
   function greet(name) {
-    var nameR = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    if (nameR) {
-      if (greetedNames[nameR] === undefined) {
-        greetedNames[nameR] = 0;
+    var nameG = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+      if (nameG) {
+        if (greetedNames[nameG] === undefined) {
+          greetedNames[nameG] = 0;
+        }
       }
-    }
+    
   }
 
   function errorhandler(lang, userName) {
 
     if (!userName && !lang) {
-      return "Please enter a name and select the a language"
+      return "Please enter a name and select a language"
     }
     else if (!userName) {
       return "Please enter a name"
@@ -31,9 +32,7 @@ function Greeting(greeted) {
   }
 
   function languageChecked(lang, userName) {
-
-    greet(userName);
-
+    
     if (lang === "Xhosa") {
       return "Molo, " + userName
 
@@ -61,7 +60,16 @@ function Greeting(greeted) {
     return greetedNames;
   }
 
-  
+  function regExpression(name) {
+      var namesReg = /[A-Za-z]/g;
+      var newInstanc = new RegExp(namesReg)
+      var regexTest = newInstanc.test(name)
+    if(name !== "") {  
+    var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+      return nameFixed; 
+    }
+     return "";
+  }
 
   return {
     greet,
@@ -69,5 +77,7 @@ function Greeting(greeted) {
     getGreetedNames,
     languageChecked,
     errorhandler,
+    regExpression,
+
   };
 }
