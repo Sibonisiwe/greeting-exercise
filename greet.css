@@ -34,9 +34,9 @@
     margin-left: 1em;
     border: 1px solid blue; 
     background-color: antiquewhite;
-    padding-bottom: 3em;
-    /* text-align-last: center; */
-    margin-top: 6em;
+    /* padding-bottom: 3em; */
+    /* text-align-last: center;  */
+    /* margin-top: 6em; */
     
 }
 
@@ -50,11 +50,11 @@
       float: right;
        
   }
-/* 
-  .enterName {
-      margin-left: 10em;
-  } */
- 
+
+  .name {
+    padding-left: 22em;
+} 
+
 }
 
 

@@ -97,4 +97,14 @@ describe("Greeting exercise", function () {
             assert.equal(0, greetings.getCounter());
         });
     });
+
+    describe("The regex function", function(){
+        it("should be able to return a boolean true", function() {
+            let greetings = Greeting();
+            greetings.regExpression("1233");
+            const regE = greetings.regExpression("1233");
+            assert.equal("1233", regE)
+            
+        });
+    })
 });

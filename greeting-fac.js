@@ -61,10 +61,11 @@ function Greeting(greeted) {
   }
 
   function regExpression(name) {
-      var namesReg = /[A-Za-z]/g;
-      var newInstanc = new RegExp(namesReg)
-      var regexTest = newInstanc.test(name)
-    if(name !== "") {  
+      var namesReg = /[^A-Za-z]/g;
+      var newInstanc = new RegExp(namesReg);
+      var regexTest = newInstanc.test(name);
+    console.log(regexTest)
+    if(regexTest !== "") {  
     var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
       return nameFixed; 
     }
