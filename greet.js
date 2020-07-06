@@ -22,6 +22,7 @@ window.addEventListener('load', function () {
 
 function greetingBtnClicked() {
   const user = enterName.value;
+  theMessage.innerHTML = greetingInstance.noNumRegex(user)
   const regularExpUser = greetingInstance.regExpression(user);
   theMessage.innerHTML = regularExpUser;
 
