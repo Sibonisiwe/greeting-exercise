@@ -1,7 +1,6 @@
 function Greeting(greeted) {
 
   var greetedNames = greeted || {}
-  //var RegExp = /[^A-Za-z]/g;
 
 
   function greet(name) {
@@ -61,22 +60,27 @@ function Greeting(greeted) {
   }
 
   function regExpression(name) {
-      var namesReg = /[^A-Za-z]\D/g;
+      var namesReg = /[^A-Za-z]{1,20}\D/g;
       var newInstanc = new RegExp(namesReg);
       var regexTest = newInstanc.test(name);
-    
+    console.log(regexTest);
     if(regexTest !== "") {  
     var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
       return nameFixed; 
-    }
+    } 
+    // if (regexTest === "true") {
+    //   var noNumber = /\D/g;
+    //   var noNumReg = name.match(noNumber).length;
+
      return "";
   }
 
-  function noNumRegex(name) {
-    let noNum = /\D/g;
-    let result = name.match(noNum);
-    return result;
-  }
+
+  // function noNumRegex(name) {
+  //   let noNum = /\D/g;
+  //   let result = name.match(noNum);
+  //   return result;
+  // }
   
   return {
     greet,
@@ -85,6 +89,6 @@ function Greeting(greeted) {
     languageChecked,
     errorhandler,
     regExpression,
-    noNumRegex
+    //noNumRegex
   };
 }

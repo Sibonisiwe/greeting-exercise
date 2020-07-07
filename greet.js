@@ -1,5 +1,5 @@
 const greetingBtn = document.querySelector(".greetingBtn");
-const enterName = document.querySelector(".enterName");
+const enterNames = document.querySelector(".enterName");
 const theMessage = document.querySelector(".message");
 
 const theButtons = document.querySelector(".radioBtn");
@@ -21,10 +21,13 @@ window.addEventListener('load', function () {
 
 
 function greetingBtnClicked() {
-  const user = enterName.value;
-  theMessage.innerHTML = greetingInstance.noNumRegex(user)
+  const user = enterNames.value;
+  // theMessage.innerHTML = greetingInstance.noNumRegex(user)
+  // const regularExpUser = document.getElementsByClassName("enterName");
+  // enterNames.innerHTML = regularExpUser;
+
   const regularExpUser = greetingInstance.regExpression(user);
-  theMessage.innerHTML = regularExpUser;
+    theMessage.innerHTML = regularExpUser;
 
     if (regularExpUser) {
       greetingInstance.greet(regularExpUser)
