@@ -99,11 +99,11 @@ describe("Greeting exercise", function () {
     });
 
     describe("The regex function", function(){
-        it("should be able to return a boolean true", function() {
+        it("should not greet a name with numbers", function() {
             let greetings = Greeting();
-            greetings.regExpression("1233");
-            const regE = greetings.regExpression("1233");
-            assert.equal("1233", regE)
+            greetings.regExpression("Sibo2");
+            const regE = greetings.regExpression("Sibo2");
+            assert.equal("", regE)
             
         });
     })

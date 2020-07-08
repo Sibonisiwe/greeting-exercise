@@ -64,8 +64,7 @@ function Greeting(greeted) {
       var newInstanc = new RegExp(namesReg);
       var regexTest = newInstanc.test(name);
     console.log(regexTest);
-    if(regexTest) {
-      //var noNumbers = regexTest.replace(namesReg, ""); 
+    if(regexTest) { 
     var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
       return nameFixed; 
     } 
@@ -74,12 +73,6 @@ function Greeting(greeted) {
      return "";
   }
 
-
-  // function noNumRegex(name) {
-  //   let noNum = /\D/g;
-  //   let result = name.match(noNum);
-  //   return result;
-  // }
   
   return {
     greet,
@@ -88,6 +81,6 @@ function Greeting(greeted) {
     languageChecked,
     errorhandler,
     regExpression,
-    //noNumRegex
+    
   };
 }
