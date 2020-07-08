@@ -22,10 +22,7 @@ window.addEventListener('load', function () {
 
 function greetingBtnClicked() {
   const user = enterNames.value;
-  // theMessage.innerHTML = greetingInstance.noNumRegex(user)
-  // const regularExpUser = document.getElementsByClassName("enterName");
-  // enterNames.innerHTML = regularExpUser;
-
+  
   const regularExpUser = greetingInstance.regExpression(user);
     theMessage.innerHTML = regularExpUser;
 
@@ -40,13 +37,8 @@ function greetingBtnClicked() {
 
     if (!errorMessage) {
 
-      // var nameG = user.charAt(0).toUpperCase() + user.slice(1).toLowerCase();
-      // if (nameG) {
-      //greetingInstance.greet(nameG)
-
       theMessage.innerHTML = greetingInstance.languageChecked(checkedRadio.value, regularExpUser)
       countElem.innerHTML = greetingInstance.getCounter();
-      //theMessage.innerHTML = greetingInstance.greet(user)
 
       localStorage.setItem('name', JSON.stringify(greetingInstance.getGreetedNames()));
     }
@@ -54,10 +46,6 @@ function greetingBtnClicked() {
   
   setTimeout(function () { theMessage.innerHTML = "" }, 3000)
 }
-
-
-
-//}
 
 
 function reset() {

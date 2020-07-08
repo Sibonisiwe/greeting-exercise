@@ -3,29 +3,18 @@
     margin-left: 1em;
     border: 1px solid blue; 
     background-color: antiquewhite;
-    padding-bottom: 3em;
     text-align-last: center; 
-    margin-top: 6em
-}
+
+} 
 
 .counter {
     font-weight: bold;
     font-size: 1em;
     color: blue;
-    float: right;
-    margin-right: 3em; 
-    padding-right: 3em;
-    
-    
+     
 }
 
-.name {
-    padding-left: 22em;
-}
 
-.h1 {
-    font-size: large;
-}
 
 @media(min-width: 800px) {
 
@@ -34,10 +23,7 @@
     margin-left: 1em;
     border: 1px solid blue; 
     background-color: antiquewhite;
-    /* padding-bottom: 3em; */
-    /* text-align-last: center;  */
-    /* margin-top: 6em; */
-    
+    text-align-last: center; 
 }
 
     
@@ -45,15 +31,8 @@
       font-weight: bold;
       font-size: 1em;
       color: blue;
-      margin-right: 20em; 
-    
-      float: right;
        
   }
-
-  .name {
-    padding-left: 22em;
-} 
 
 }
 

@@ -60,17 +60,16 @@ function Greeting(greeted) {
   }
 
   function regExpression(name) {
-      var namesReg = /[^A-Za-z]{1,20}\D/g;
+      var namesReg = /^[A-Za-z]+$/;
       var newInstanc = new RegExp(namesReg);
       var regexTest = newInstanc.test(name);
     console.log(regexTest);
-    if(regexTest !== "") {  
+    if(regexTest) {
+      //var noNumbers = regexTest.replace(namesReg, ""); 
     var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
       return nameFixed; 
     } 
-    // if (regexTest === "true") {
-    //   var noNumber = /\D/g;
-    //   var noNumReg = name.match(noNumber).length;
+     
 
      return "";
   }
