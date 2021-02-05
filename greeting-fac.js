@@ -11,24 +11,24 @@ function Greeting(greeted) {
         }
       }
     
-  }
+   }
 
-  function errorhandler(lang, userName) {
+  // function errorhandler(lang, userName) {
 
-    if (!userName && !lang) {
-      return "Please enter a name and select a language"
-    }
-    else if (!userName) {
-      return "Please enter a name"
-    }
+  //   if (!userName && !lang) {
+  //     return "Please enter a name and select a language"
+  //   }
+  //   else if (!userName) {
+  //     return "Please enter a name"
+  //   }
 
-    else if (!lang) {
-      return "Please select a language"
-    }
+  //   else if (!lang) {
+  //     return "Please select a language"
+  //   }
 
-    return "";
+  //   return "";
 
-  }
+  // }
 
   function languageChecked(lang, userName) {
     
@@ -59,28 +59,28 @@ function Greeting(greeted) {
     return greetedNames;
   }
 
-  function regExpression(name) {
-      var namesReg = /^[A-Za-z]+$/;
-      var newInstanc = new RegExp(namesReg);
-      var regexTest = newInstanc.test(name);
-    console.log(regexTest);
-    if(regexTest) { 
-    var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-      return nameFixed; 
-    } 
+  // function regExpression(name) {
+  //     var namesReg = /^[A-Za-z]+$/;
+  //     var newInstanc = new RegExp(namesReg);
+  //     var regexTest = newInstanc.test(name);
+  //   console.log(regexTest);
+  //   if(regexTest) { 
+  //   var nameFixed = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  //     return nameFixed; 
+  //   } 
      
 
-     return "";
-  }
+  //    return "";
+  // }
 
   
-  return {
+   return {
     greet,
     getCounter,
     getGreetedNames,
-    languageChecked,
-    errorhandler,
-    regExpression,
+   languageChecked,
+  //   errorhandler,
+  //   regExpression,
     
-  };
+   };
 }
